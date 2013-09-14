@@ -4,8 +4,6 @@
 define("TOKEN", "qwerty2345");
 $wechatObj = new wechatCallbackapiTest();
 //$wechatObj->valid();
-echo "comeing";
-
 $wechatObj->responseMsg();
 
 class wechatCallbackapiTest
