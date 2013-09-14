@@ -1,0 +1,1 @@
+搭建mp.weixin认证服务参考：http://blog.sina.com.cn/s/blog_73b905910101a3xk.html
