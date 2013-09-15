@@ -34,7 +34,7 @@ class wechatCallbackapiTest
     //   $errorCode = $result['errorCode'];        
     $trans = $result['translation'];
     //$trans = "dddddd";
-        return $trans;
+        return $result;
     /*
         if(isset($errorCode)){
             switch ($errorCode){
