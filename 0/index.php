@@ -6,7 +6,7 @@ define("TOKEN", "qwerty2345");
 $wechatObj = new wechatCallbackapiTest();
 //$wechatObj->valid();
 //$wechatObj->responseMsg();
-echo "translate";
+
 echo $wecharObj->baiduDic("你好");
 class wechatCallbackapiTest
 {
@@ -23,7 +23,7 @@ class wechatCallbackapiTest
   
   //百度翻译
     public function baiduDic($word,$from="auto",$to="auto"){
-        
+        echo "translating";
         //首先对要翻译的文字进行 urlencode 处理
         $word_code=urlencode($word);
         
@@ -35,7 +35,7 @@ class wechatCallbackapiTest
         $text=json_decode($this->language_text($baidu_url));
 
         $text = $text->trans_result;
-
+		echo $text;
         return $text[0]->dst;
     }
         
