@@ -53,6 +53,7 @@ class wechatCallbackapiTest
                     break;
             }
         }
+    $trans = $result['translation']['0'];
         return $trans;  
     }
   
