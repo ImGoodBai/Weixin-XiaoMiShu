@@ -26,9 +26,7 @@ class wechatCallbackapiTest
         $keyfrom = "goodbaiA";    //申请APIKEY时所填表的网站名称的内容
         $apikey = "2122702772";  //从有道申请的APIKEY    
         //有道翻译-json格式
-        $url_youdao = 'http://fanyi.youdao.com/fanyiapi.do?keyfrom='.$keyfrom.'&key='.$apikey.'&type=data&doctype=json&version=1.1&q='.$word;      
-    //       $jsonStyle = file_get_contents($url_youdao);
-    //  $result = json_decode($jsonStyle,true); 
+        $url_youdao = 'http://fanyi.youdao.com/fanyiapi.do?keyfrom='.$keyfrom.'&key='.$apikey.'&type=data&doctype=json&version=1.1&q='.$word; 
     	$result = json_decode($this->getdata4URL($url_youdao));
         $errorCode = $result['errorCode'];        
         $trans = '';
