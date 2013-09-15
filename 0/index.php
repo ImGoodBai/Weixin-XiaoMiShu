@@ -20,6 +20,43 @@ class wechatCallbackapiTest
         	exit;
         }
     }
+  
+  public function youdaoDic($word){
+
+        $keyfrom = "goodbaiA";    //申请APIKEY时所填表的网站名称的内容
+        $apikey = "2122702772";  //从有道申请的APIKEY    
+        //有道翻译-json格式
+        $url_youdao = 'http://fanyi.youdao.com/fanyiapi.do?keyfrom='.$keyfrom.'&key='.$apikey.'&type=data&doctype=json&version=1.1&q='.$word;      
+    //       $jsonStyle = file_get_contents($url_youdao);
+    //  $result = json_decode($jsonStyle,true); 
+    	$result = json_decode($this->getdata4URL($url_youdao));
+        $errorCode = $result['errorCode'];        
+        $trans = '';
+        if(isset($errorCode)){
+            switch ($errorCode){
+                case 0:
+                    $trans = $result['translation']['0'];
+                    break;
+                case 20:
+                    $trans = '要翻译的文本过长';
+                    break;
+                case 30:
+                    $trans = '无法进行有效的翻译';
+                    break;
+                case 40:
+                    $trans = '不支持的语言类型';
+                    break;
+                case 50:
+                    $trans = '无效的key';
+                    break;
+                default:
+                    $trans = '出现异常';
+                    break;
+            }
+        }
+        return $trans;  
+    }
+  
  	public function baiduTran($word,$from="auto",$to="auto")
     {
     	echo "My tran function.";
@@ -28,42 +65,31 @@ class wechatCallbackapiTest
 		$word_code=urlencode($word);
 		$baidu_url = "http://openapi.baidu.com/public/2.0/bmt/translate?client_id=".$appid."&q=".$word_code."&from=".$from."&to=".$to;
 		echo $baidu_url;
-        $text=json_decode($this->language_text($baidu_url));
+        $text=json_decode($this->getdata4URL($baidu_url));
         $text = $text->trans_result;
 		echo $text;
         return $text[0]->dst;
     }
         
     //百度翻译-获取目标URL所打印的内容
-    public function language_text($url){
-
+    public function getdata4URL($url){
         if(!function_exists('file_get_contents')){
-
             $file_contents = file_get_contents($url);
-
-        }else{
-                
+        }else{              
             //初始化一个cURL对象
             $ch = curl_init();
-
             $timeout = 5;
-
             //设置需要抓取的URL
             curl_setopt ($ch, CURLOPT_URL, $url);
-
             //设置cURL 参数，要求结果保存到字符串中还是输出到屏幕上
             curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
-
             //在发起连接前等待的时间，如果设置为0，则无限等待
             curl_setopt ($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
-
             //运行cURL，请求网页
             $file_contents = curl_exec($ch);
-
             //关闭URL请求
             curl_close($ch);
         }
-
         return $file_contents;
     }
 
