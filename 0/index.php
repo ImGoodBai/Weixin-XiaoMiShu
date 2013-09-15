@@ -6,7 +6,7 @@ define("TOKEN", "qwerty2345");
 $wechatObj = new wechatCallbackapiTest();
 //$wechatObj->valid();
 //$wechatObj->responseMsg();
-$wechatObj->tran();
+$wechatObj->baiduTran();
 
 //echo $wecharObj->baiduDic("你好");
 class wechatCallbackapiTest
@@ -21,9 +21,15 @@ class wechatCallbackapiTest
         	exit;
         }
     }
- 	public function tran()
+ 	public function baiduTran()
     {
       echo "My tran function.";
+      if(!function_exists('file_get_contents'))
+      {
+        echo "exists";
+        $file_contents = file_get_contents($url);
+
+       }
     }
   
   //百度翻译
