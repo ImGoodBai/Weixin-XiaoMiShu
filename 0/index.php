@@ -53,7 +53,7 @@ class wechatCallbackapiTest
                     break;
             }
         }
-    $trans = "wawa";
+    $trans = $result;
         return $trans;  
     }
   
