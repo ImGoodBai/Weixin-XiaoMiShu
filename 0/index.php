@@ -64,12 +64,12 @@ class wechatCallbackapiTest
         $appid = "ANGEgE28iVZYfWqOY80ih0Az";
 		$word_code=urlencode($word);
 		$baidu_url = "http://openapi.baidu.com/public/2.0/bmt/translate?client_id=".$appid."&q=".$word_code."&from=".$from."&to=".$to;
-        $result=json_decode($this->getdata4URL($baidu_url));
-        $errorCode = $result['error_code'];     
-        $trans1 = $result['trans_result']['0'];
-        $trans = $trans1->dst;
-        return $trans;
+        $text=json_decode($this->getdata4URL($baidu_url));
+        $text = $text->trans_result;
+        return $text[0]->dst;
+      
      /* $trans = '';
+        $errorCode = $result['error_code'];  
  		if(isset($errorCode)){
             $trans = '出现异常';
         }else{
