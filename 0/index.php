@@ -59,16 +59,25 @@ class wechatCallbackapiTest
   
  	public function baiduTran($word,$from="auto",$to="auto")
     {
-    	echo "My tran function.";
+      //echo "My tran function.";
       //$word = "你好";
         $appid = "ANGEgE28iVZYfWqOY80ih0Az";
 		$word_code=urlencode($word);
 		$baidu_url = "http://openapi.baidu.com/public/2.0/bmt/translate?client_id=".$appid."&q=".$word_code."&from=".$from."&to=".$to;
-		echo $baidu_url;
-        $text=json_decode($this->getdata4URL($baidu_url));
-        $text = $text->trans_result;
-		echo $text;
-        return $text[0]->dst;
+        $result=json_decode($this->getdata4URL($baidu_url));
+        $errorCode = $result['error_code'];        
+        $trans = '';
+        if(isset($errorCode)){
+            switch ($errorCode){
+                case 0:
+                    $trans = $result['trans_result']['0'];
+                    break;
+                default:
+                    $trans = '出现异常';
+                    break;
+            }
+        }
+        return $trans->dst;
     }
         
     //百度翻译-获取目标URL所打印的内容
