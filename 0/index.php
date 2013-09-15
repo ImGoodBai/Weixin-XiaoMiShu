@@ -53,7 +53,6 @@ class wechatCallbackapiTest
                     break;
             }
         }
-    	$trans =  "youdao";
         return $trans;  
     }
   
