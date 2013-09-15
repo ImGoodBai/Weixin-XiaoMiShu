@@ -30,10 +30,9 @@ class wechatCallbackapiTest
     	$url_youdao = 'http://fanyi.youdao.com/openapi.do?keyfrom=goodbaiA&key=2122702772&type=data&doctype=json&version=1.1&q=wolf'; 
    
     $result = json_decode($this->getdata4URL($url_youdao));
-            	$trans = "cdddcddddd";
-        return $trans; 
+
         $errorCode = $result['errorCode'];        
-        $trans = $result['translation']['0'];
+        $trans = $result['translation'];
     	$trans = "dddddd";
         return $trans;
     /*
