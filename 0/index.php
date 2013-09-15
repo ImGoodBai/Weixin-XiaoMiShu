@@ -23,15 +23,17 @@ class wechatCallbackapiTest
     }
  	public function baiduTran()
     {
-      echo "My tran function.";
-      if(!function_exists('file_get_contents'))
-      {
-        echo "exists";
-        $file_contents = file_get_contents($url);
-       }else
-      {
-        echo "not exists";
-      }
+    	echo "My tran function.";
+    	$word = "你好”;
+		$word_code=urlencode($word);
+		$appid="ANGEgE28iVZYfWqOY80ih0Az";
+
+		$baidu_url = "http://openapi.baidu.com/public/2.0/bmt/translate?client_id=".$appid."&q=".$word_code."&from=".$from."&to=".$to;
+		echo $baidu_url;
+        $text=json_decode($this->language_text($baidu_url));
+        $text = $text->trans_result;
+		echo $text;
+        return $text[0]->dst;
     }
   
   //百度翻译
