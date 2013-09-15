@@ -5,8 +5,8 @@ echo "Welcome to goodbai.duapp";
 define("TOKEN", "qwerty2345");
 $wechatObj = new wechatCallbackapiTest();
 //$wechatObj->valid();
-$wechatObj->responseMsg();
-
+//$wechatObj->responseMsg();
+echo $wecharObj->baiduDic($word);
 class wechatCallbackapiTest
 {
 	public function valid()
@@ -18,6 +18,57 @@ class wechatCallbackapiTest
         	echo $echoStr;
         	exit;
         }
+    }
+  
+  //百度翻译
+    public function baiduDic($word,$from="auto",$to="auto"){
+        
+        //首先对要翻译的文字进行 urlencode 处理
+        $word_code=urlencode($word);
+        
+        //注册的API Key
+        $appid="ANGEgE28iVZYfWqOY80ih0Az";
+        
+        //生成翻译API的URL GET地址
+        $baidu_url = "http://openapi.baidu.com/public/2.0/bmt/translate?client_id=".$appid."&q=".$word_code."&from=".$from."&to=".$to;
+        $text=json_decode($this->language_text($baidu_url));
+
+        $text = $text->trans_result;
+
+        return $text[0]->dst;
+    }
+        
+    //百度翻译-获取目标URL所打印的内容
+    public function language_text($url){
+
+        if(!function_exists('file_get_contents')){
+
+            $file_contents = file_get_contents($url);
+
+        }else{
+                
+            //初始化一个cURL对象
+            $ch = curl_init();
+
+            $timeout = 5;
+
+            //设置需要抓取的URL
+            curl_setopt ($ch, CURLOPT_URL, $url);
+
+            //设置cURL 参数，要求结果保存到字符串中还是输出到屏幕上
+            curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
+
+            //在发起连接前等待的时间，如果设置为0，则无限等待
+            curl_setopt ($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
+
+            //运行cURL，请求网页
+            $file_contents = curl_exec($ch);
+
+            //关闭URL请求
+            curl_close($ch);
+        }
+
+        return $file_contents;
     }
 
     public function responseMsg()
