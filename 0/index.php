@@ -33,25 +33,6 @@ class wechatCallbackapiTest
 		echo $text;
         return $text[0]->dst;
     }
-  
-  //百度翻译
-    public function baiduDic($word,$from="auto",$to="auto"){
-        echo "translating";
-        //首先对要翻译的文字进行 urlencode 处理
-        $word_code=urlencode($word);
-        
-        //注册的API Key
-        $appid="ANGEgE28iVZYfWqOY80ih0Az";
-        
-        //生成翻译API的URL GET地址
-        $baidu_url = "http://openapi.baidu.com/public/2.0/bmt/translate?client_id=".$appid."&q=".$word_code."&from=".$from."&to=".$to;
-        echo $baidu_url;
-        $text=json_decode($this->language_text($baidu_url));
-
-        $text = $text->trans_result;
-		echo $text;
-        return $text[0]->dst;
-    }
         
     //百度翻译-获取目标URL所打印的内容
     public function language_text($url){
