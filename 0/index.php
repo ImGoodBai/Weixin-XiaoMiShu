@@ -68,16 +68,12 @@ class wechatCallbackapiTest
         $errorCode = $result['error_code'];        
         $trans = '';
         if(isset($errorCode)){
-            switch ($errorCode){
-                case 0:
-                    $trans = $result['trans_result']['0'];
-                    break;
-                default:
-                    $trans = '出现异常';
-                    break;
-            }
+            $trans = '出现异常';
+        }else{
+       		$trans1 = $result['trans_result']['0'];
+          	$trans = $trans1->dst;
+        	return $trans;
         }
-        return $trans->dst;
     }
         
     //百度翻译-获取目标URL所打印的内容
