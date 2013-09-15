@@ -40,8 +40,7 @@ class wechatCallbackapiTest
     public function baiduDic($word,$from="auto",$to="auto"){
         echo "translating";
         //首先对要翻译的文字进行 urlencode 处理
-        $word_code=urlencode($word);
-        
+        $word_code=urlencode($word);      
         //注册的API Key
       //$appid="ANGEgE28iVZYfWqOY80ih0Az";
         
