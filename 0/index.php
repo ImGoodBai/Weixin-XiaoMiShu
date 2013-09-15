@@ -92,7 +92,7 @@ class wechatCallbackapiTest
                 {
               		$msgType = "text";
                   //$contentStr = "Welcome to wechat world!";
-                    $contentStr = baidutran($keyword);
+                    $contentStr = baiduTran($keyword);
                 	$resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $contentStr);
                 	echo $resultStr;
                 }else{
