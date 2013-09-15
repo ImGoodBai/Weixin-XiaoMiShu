@@ -27,7 +27,6 @@ class wechatCallbackapiTest
     	$word = "你好”;
 		$word_code=urlencode($word);
 		$appid = "aaa";
-
 		$baidu_url = "http://openapi.baidu.com/public/2.0/bmt/translate?client_id=".$appid."&q=".$word_code."&from=".$from."&to=".$to;
 		echo $baidu_url;
         $text=json_decode($this->language_text($baidu_url));
@@ -40,9 +39,10 @@ class wechatCallbackapiTest
     public function baiduDic($word,$from="auto",$to="auto"){
         echo "translating";
         //首先对要翻译的文字进行 urlencode 处理
-        $word_code=urlencode($word);      
+        $word_code=urlencode($word);
+        
         //注册的API Key
-      //$appid="ANGEgE28iVZYfWqOY80ih0Az";
+        $appid="ANGEgE28iVZYfWqOY80ih0Az";
         
         //生成翻译API的URL GET地址
         $baidu_url = "http://openapi.baidu.com/public/2.0/bmt/translate?client_id=".$appid."&q=".$word_code."&from=".$from."&to=".$to;
