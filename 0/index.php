@@ -1,5 +1,6 @@
 <?php
 
+echo "Welcome to goodbai.duapp";
 //define your token
 define("TOKEN", "qwerty2345");
 $wechatObj = new wechatCallbackapiTest();
