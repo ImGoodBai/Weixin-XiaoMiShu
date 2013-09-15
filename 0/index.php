@@ -23,7 +23,7 @@ class wechatCallbackapiTest
  	public function baiduTran($word,$from="auto",$to="auto")
     {
     	echo "My tran function.";
-        $word = "你好";
+      //$word = "你好";
         $appid = "ANGEgE28iVZYfWqOY80ih0Az";
 		$word_code=urlencode($word);
 		$baidu_url = "http://openapi.baidu.com/public/2.0/bmt/translate?client_id=".$appid."&q=".$word_code."&from=".$from."&to=".$to;
