@@ -5,8 +5,7 @@ echo "Welcome to goodbai.duapp";
 define("TOKEN", "qwerty2345");
 $wechatObj = new wechatCallbackapiTest();
 //$wechatObj->valid();
-//$wechatObj->responseMsg();
-$wechatObj->baiduTran();
+$wechatObj->responseMsg();
 
 //echo $wecharObj->baiduDic("你好");
 class wechatCallbackapiTest
@@ -21,7 +20,7 @@ class wechatCallbackapiTest
         	exit;
         }
     }
- 	public function baiduTran()
+ 	public function baiduTran($word,$from="auto",$to="auto")
     {
     	echo "My tran function.";
         $word = "你好";
@@ -92,7 +91,8 @@ class wechatCallbackapiTest
 				if(!empty( $keyword ))
                 {
               		$msgType = "text";
-                	$contentStr = "Welcome to wechat world!";
+                  //$contentStr = "Welcome to wechat world!";
+                    $contentStr = baidutran($keyword);
                 	$resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $contentStr);
                 	echo $resultStr;
                 }else{
