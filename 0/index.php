@@ -68,7 +68,7 @@ class wechatCallbackapiTest
         $text = $text->trans_result;
         $src = $text[0]->src;
         $dst = $text[0]->dst;
-      $outstr = "Build Tran:[".$src."]:".$dst;
+      $outstr = "Build Tran:\n[".$src."]:".$dst;
         return $outstr;
       
      /* $trans = '';
