@@ -31,7 +31,7 @@ class wechatCallbackapiTest
         $result = json_decode($this->getdata4URL($url_youdao));
         $errorCode = $result['errorCode'];        
         $trans = $result['translation']['0'];
-        return $result;
+        return "dddd";
     /*
         if(isset($errorCode)){
             switch ($errorCode){
