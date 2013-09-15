@@ -65,15 +65,19 @@ class wechatCallbackapiTest
 		$word_code=urlencode($word);
 		$baidu_url = "http://openapi.baidu.com/public/2.0/bmt/translate?client_id=".$appid."&q=".$word_code."&from=".$from."&to=".$to;
         $result=json_decode($this->getdata4URL($baidu_url));
-        $errorCode = $result['error_code'];        
-        $trans = '';
-        if(isset($errorCode)){
+        $errorCode = $result['error_code'];     
+        $trans1 = $result['trans_result']['0'];
+        $trans = $trans1->dst;
+        return $trans;
+     /* $trans = '';
+ 		if(isset($errorCode)){
             $trans = '出现异常';
         }else{
        		$trans1 = $result['trans_result']['0'];
           	$trans = $trans1->dst;
         	return $trans;
         }
+*/
     }
         
     //百度翻译-获取目标URL所打印的内容
