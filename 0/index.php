@@ -6,8 +6,9 @@ define("TOKEN", "qwerty2345");
 $wechatObj = new wechatCallbackapiTest();
 //$wechatObj->valid();
 //$wechatObj->responseMsg();
+$wechatObj->tran();
 
-echo $wecharObj->baiduDic("你好");
+//echo $wecharObj->baiduDic("你好");
 class wechatCallbackapiTest
 {
 	public function valid()
@@ -19,6 +20,10 @@ class wechatCallbackapiTest
         	echo $echoStr;
         	exit;
         }
+    }
+ 	public function tran()
+    {
+      echo "My tran function.";
     }
   
   //百度翻译
