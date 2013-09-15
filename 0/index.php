@@ -28,8 +28,10 @@ class wechatCallbackapiTest
       {
         echo "exists";
         $file_contents = file_get_contents($url);
-
-       }
+       }else
+      {
+        echo "not exists";
+      }
     }
   
   //百度翻译
