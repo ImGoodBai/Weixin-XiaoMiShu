@@ -13,3 +13,11 @@ $wechatObj->responseMsg();
 
 <h2>参考</h2>
 google search (天气预报 上海 api) http://www.google.com.hk/search?newwindow=1&safe=strict&client=safari&rls=en&q=%E5%A4%A9%E6%B0%94%E9%A2%84%E6%8A%A5+%E4%B8%8A%E6%B5%B7+api&oq=%E5%A4%A9%E6%B0%94%E9%A2%84%E6%8A%A5+%E4%B8%8A%E6%B5%B7+api&gs_l=serp.12...0.0.0.83631886.0.0.0.0.0.0.0.0..0.0....0...1c..26.serp..0.0.0.RRVw2C1mR_w
+
+<h2>backup</h2>
+有道翻译API申请成功
+API key：2122702772
+keyfrom：goodbaiA
+创建时间：2013-09-15
+网站名称：goodbaiA
+网站地址：http://goodbai.duapp.com
