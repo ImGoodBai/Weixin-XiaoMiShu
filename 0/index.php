@@ -67,7 +67,7 @@ class wechatCallbackapiTest
         $text=json_decode($this->getdata4URL($baidu_url));
         $text = $text->trans_result;
         $src = $text[0]->src;
-        $dst = $text[0]-dst;
+        $dst = $text[0]->dst;
       $outstr = "Build Tran:[".$src."]:".$dst;
         return $outstr;
       
