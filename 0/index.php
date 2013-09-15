@@ -43,7 +43,7 @@ class wechatCallbackapiTest
         $word_code=urlencode($word);
         
         //注册的API Key
-        $appid="ANGEgE28iVZYfWqOY80ih0Az";
+      //$appid="ANGEgE28iVZYfWqOY80ih0Az";
         
         //生成翻译API的URL GET地址
         $baidu_url = "http://openapi.baidu.com/public/2.0/bmt/translate?client_id=".$appid."&q=".$word_code."&from=".$from."&to=".$to;
