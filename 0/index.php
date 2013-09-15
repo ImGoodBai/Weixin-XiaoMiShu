@@ -66,7 +66,9 @@ class wechatCallbackapiTest
 		$baidu_url = "http://openapi.baidu.com/public/2.0/bmt/translate?client_id=".$appid."&q=".$word_code."&from=".$from."&to=".$to;
         $text=json_decode($this->getdata4URL($baidu_url));
         $text = $text->trans_result;
-      $outstr = "Build Tran:[";
+        $src = $text[0]->src;
+        $dst = $text[0]-dst;
+      $outstr = "Build Tran:[".$src."]:".$dst;
         return $outstr;
       
      /* $trans = '';
