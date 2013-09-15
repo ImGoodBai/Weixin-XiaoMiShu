@@ -92,8 +92,8 @@ class wechatCallbackapiTest
                 {
               		$msgType = "text";
                   //$contentStr = "Welcome to wechat world!";
-                    $contentStr = $keyword;
-                  //$contentStr = baiduTran($keyword);
+                  //$contentStr = $keyword;
+                    $contentStr = $this->baiduTran($keyword);
                 	$resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $contentStr);
                 	echo $resultStr;
                 }else{
