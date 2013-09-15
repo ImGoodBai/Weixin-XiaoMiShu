@@ -28,9 +28,10 @@ class wechatCallbackapiTest
         //有道翻译-json格式
         //$url_youdao = 'http://fanyi.youdao.com/fanyiapi.do?keyfrom='.$keyfrom.'&key='.$apikey.'&type=data&doctype=json&version=1.1&q='.$word; 
     	$url_youdao = 'http://fanyi.youdao.com/openapi.do?keyfrom=goodbaiA&key=2122702772&type=data&doctype=json&version=1.1&q=wolf'; 
-        	$trans = "cdddcdd";
-        return $trans;    
+   
     $result = json_decode($this->getdata4URL($url_youdao));
+            	$trans = "cdddcddddd";
+        return $trans; 
         $errorCode = $result['errorCode'];        
         $trans = $result['translation']['0'];
     	$trans = "dddddd";
