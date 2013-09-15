@@ -21,7 +21,7 @@ class wechatCallbackapiTest
         }
     }
   
-  public function youdaoDic($word){
+  public function youdaoTran($word){
 
         $keyfrom = "goodbaiA";    //申请APIKEY时所填表的网站名称的内容
         $apikey = "2122702772";  //从有道申请的APIKEY    
