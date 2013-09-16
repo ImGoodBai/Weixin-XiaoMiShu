@@ -26,6 +26,7 @@ class wechatCallbackapiTest{
 		}else{
 			$trans = "服务出错";
 		}
+    	$trans = $title.$explains.$devide.$other;
         return $trans;
     /*
         if(isset($errorCode)){
