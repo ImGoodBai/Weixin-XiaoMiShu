@@ -47,7 +47,7 @@ class baidu{
 	echo "------tran-----------";
 
     //   $errorCode = $result['errorCode'];        
-    $trans = $result['translation'];
+    $trans = $result['translation'][0];
        //	$trans = "dddddd";
         return $trans;  
     }
