@@ -1,6 +1,4 @@
 <?php
-   public function responseMsg()
-    {
     
                 $fromUsername = $_POST[ "FromUserName" ];
                 $toUsername = $_POST[ "ToUserName" ];
@@ -27,16 +25,15 @@
                 }else{
                 	echo "Input something...";
                 }
-    }
 
 
-
+                                       /*
 
 $name = $_POST[ 'name' ];
 $passwd = $_POST[ 'passwd'  ];
 echo "name: ".$name;
 echo "\npasswd: ".$passwd;
 
-
+                                       */
 
 ?>
