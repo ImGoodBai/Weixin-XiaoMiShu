@@ -1,10 +1,5 @@
 <?php
-    
-                $fromUsername = $_POST[ "FromUserName" ];
-                $toUsername = $_POST[ "ToUserName" ];
-                $keyword = trim($_POST[ "Content" ];
-                $msgType = trim($_POST[ "MsgType" ];
-                $time = time();
+
                 $textTpl = "<xml>
 							<ToUserName><![CDATA[%s]]></ToUserName>
 							<FromUserName><![CDATA[%s]]></FromUserName>
