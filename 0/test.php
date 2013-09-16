@@ -36,15 +36,15 @@ class baidu{
         //$url_youdao = 'http://fanyi.youdao.com/fanyiapi.do?keyfrom='.$keyfrom.'&key='.$apikey.'&type=data&doctype=json&version=1.1&q='.$word; 
     	$url_youdao = 'http://fanyi.youdao.com/openapi.do?keyfrom=goodbaiA&key=2122702772&type=data&doctype=json&version=1.1&q=wolf'; 
    echo $url_youdao;
-	echo "-----------------";
+	echo "-----url------------";
 	$resultstr = $this->getdata4URL($url_youdao);
 	echo $resultstr;
-	echo "-----------------";
+	echo "----str-------------";
     $result = json_decode($resultstr,true);
 	echo $result;
-	echo "-----------------";
+	echo "------res-----------";
 	echo $result->translation;
-	echo "-----------------";
+	echo "------tran-----------";
 
     //   $errorCode = $result['errorCode'];        
     $trans = $result['translation'];
