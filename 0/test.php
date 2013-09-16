@@ -23,7 +23,7 @@
                 }else{
                 	echo "Input something...";
                 }
-
+                                       /*
  	public function baiduTran($word,$from="auto",$to="auto")
     {
       //echo "My tran function.";
@@ -37,7 +37,7 @@
         $dst = $text[0]->dst;
         $outstr = "[".$src."]: ".$dst;
         return $outstr;
-      
+      */   
      /* $trans = '';
         $errorCode = $result['error_code'];  
  		if(isset($errorCode)){
@@ -49,7 +49,8 @@
         }
 */
     }
-        
+ 
+                                       /*                                    
     //百度翻译-获取目标URL所打印的内容
     public function getdata4URL($url){
         if(!function_exists('file_get_contents')){
@@ -71,13 +72,5 @@
         }
         return $file_contents;
     }
-                                       /*
-
-$name = $_POST[ 'name' ];
-$passwd = $_POST[ 'passwd'  ];
-echo "name: ".$name;
-echo "\npasswd: ".$passwd;
-
                                        */
-
 ?>
