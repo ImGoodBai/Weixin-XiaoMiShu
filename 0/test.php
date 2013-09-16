@@ -25,6 +25,9 @@
                 	echo "Input something...";
                 }
 
+
+class baidu{
+
   public function youdaoTran($word){
         $keyfrom = "goodbaiA";    //申请APIKEY时所填表的网站名称的内容
         $apikey = "2122702772";  //从有道申请的APIKEY    
@@ -37,11 +40,9 @@
     //   $errorCode = $result['errorCode'];        
     //   $trans = $result['translation'];
     	$trans = "dddddd";
-        return $trans;
-  
+        return $trans;  
     }
 
-class baidu{
  	public function baiduTran($word,$from="auto",$to="auto")
     {
       //echo "My tran function.";
