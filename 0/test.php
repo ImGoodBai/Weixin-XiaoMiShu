@@ -35,7 +35,7 @@ class baidu{
         $text=json_decode($this->getdata4URL($baidu_url));
         $text = $text->trans_result;
         echo "----debug---<br>";
-        echo $text;
+        echo $baidu_url;
         echo "----debug---<br>";
         $src = $text[0]->src;
         $dst = $text[0]->dst;
