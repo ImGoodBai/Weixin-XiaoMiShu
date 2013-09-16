@@ -45,6 +45,8 @@ class baidu{
     $errorCode = $result['errorCode']; 
 	if($errorCode == 0){
 
+		$phonetic = $result[ 'basic' ][ 'phonetic' ];
+		$title = $result[ 'query' ].": ".$phonetic;
 	}else{
 		$trans = "服务出错";
 	}
