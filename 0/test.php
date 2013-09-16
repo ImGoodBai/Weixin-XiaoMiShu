@@ -42,10 +42,15 @@ class baidu{
 	echo $result;
 	echo $result->translation;
 
-    //   $errorCode = $result['errorCode'];        
+    $errorCode = $result['errorCode']; 
+	if($errorCode == 0){
+
+	}else{
+		trans = “服务出错";
+	}
     $trans = $result['translation'][0];
        //	$trans = "dddddd";
-        return $resultstr;  
+        return $trans;  
     }
 
  	public function baiduTran($word,$from="auto",$to="auto")
