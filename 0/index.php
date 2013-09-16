@@ -138,7 +138,8 @@ class wechatCallbackapiTest
         	exit;
         }
     }
-}	
+}
+//验证URL
 class validURL{
   public function valid()
     {
