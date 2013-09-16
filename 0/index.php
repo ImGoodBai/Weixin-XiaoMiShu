@@ -8,9 +8,7 @@ $wechatObj = new wechatCallbackapiTest();
 $wechatObj->responseMsg();
 
 //echo $wecharObj->baiduDic("你好");
-class wechatCallbackapiTest
-{
-	
+class wechatCallbackapiTest{
   
   public function youdaoTran($word){
 
