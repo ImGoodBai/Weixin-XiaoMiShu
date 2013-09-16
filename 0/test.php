@@ -16,14 +16,14 @@
               		$msgType = "text";
                   $contentStr = "Welcome to wechat world!";
                   //$contentStr = $keyword;
-                  // $contentStr = $this->baiduTran($keyword);
+                  $contentStr = $this->baiduTran($keyword);
                   //  $contentStr = $this->youdaoTran($keyword);
                 	$resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $contentStr);
                 	echo $resultStr;
                 }else{
                 	echo "Input something...";
                 }
-                                       /*
+class baidu{
  	public function baiduTran($word,$from="auto",$to="auto")
     {
       //echo "My tran function.";
@@ -37,7 +37,7 @@
         $dst = $text[0]->dst;
         $outstr = "[".$src."]: ".$dst;
         return $outstr;
-      */   
+       
      /* $trans = '';
         $errorCode = $result['error_code'];  
  		if(isset($errorCode)){
@@ -47,10 +47,10 @@
           	$trans = $trans1->dst;
         	return $trans;
         }
-
+ */
     }
- */b
-                                       /*                                    
+
+                                                                          
     //百度翻译-获取目标URL所打印的内容
     public function getdata4URL($url){
         if(!function_exists('file_get_contents')){
@@ -72,5 +72,5 @@
         }
         return $file_contents;
     }
-                                       */
+                                       
 ?>
