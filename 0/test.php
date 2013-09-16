@@ -39,8 +39,8 @@ class baidu{
     $result = json_decode($this->getdata4URL($url_youdao));
 
     //   $errorCode = $result['errorCode'];        
-    //   $trans = $result['translation'];
-    	$trans = "dddddd";
+    $trans = $result['translation'];
+       //	$trans = "dddddd";
         return $trans;  
     }
 
