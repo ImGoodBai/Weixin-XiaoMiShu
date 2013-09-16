@@ -19,7 +19,7 @@
                   $baiduobj = new baidu();
                   $contentStr = $baiduobj->baiduTran($keyword);
                   //  $contentStr = $this->youdaoTran($keyword);
-                	$resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $contentStr);
+                	$resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType,$keyword, $contentStr);
                 	echo $resultStr;
                 }else{
                 	echo "Input something...";
