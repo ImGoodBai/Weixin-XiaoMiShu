@@ -53,8 +53,9 @@ class baidu{
 	}else{
 		$trans = "服务出错";
 	}
-    $trans = $result['translation'][0];
+ //   $trans = $result['translation'][0];
        //	$trans = "dddddd";
+		$trans = $title.$explains.$other;
         return $trans;  
     }
 
