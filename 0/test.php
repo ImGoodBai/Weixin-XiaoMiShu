@@ -37,6 +37,7 @@ class baidu{
     	$url_youdao = 'http://fanyi.youdao.com/openapi.do?keyfrom=goodbaiA&key=2122702772&type=data&doctype=json&version=1.1&q=wolf'; 
    echo $url_youdao;
 	$resultstr = $this->getdata4URL($url_youdao);
+	echo $resultstr;
     $result = json_decode($resultstr);
 
     //   $errorCode = $result['errorCode'];        
