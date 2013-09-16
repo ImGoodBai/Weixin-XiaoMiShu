@@ -1,8 +1,7 @@
 <?php
    public function responseMsg()
     {
-		if (!empty($postStr)){
-                
+    
                 $fromUsername = $_POST[ "FromUserName" ];
                 $toUsername = $_POST[ "ToUserName" ];
                 $keyword = trim($_POST[ "Content" ];
@@ -28,11 +27,6 @@
                 }else{
                 	echo "Input something...";
                 }
-
-        }else {
-        	echo "";
-        	exit;
-        }
     }
 
 
