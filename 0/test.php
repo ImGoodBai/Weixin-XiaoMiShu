@@ -56,7 +56,7 @@ class baidu{
 	}
  //   $trans = $result['translation'][0];
        //	$trans = "dddddd";
-		$trans = $title.$explains.$other;
+		$trans = $title.$explains.$devide.$other;
         return $trans;  
     }
 
