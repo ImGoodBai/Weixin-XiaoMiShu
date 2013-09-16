@@ -47,8 +47,8 @@ class baidu{
 
 		$phonetic = $result[ 'basic' ][ 'phonetic' ]."\n";
 		$title = $result[ 'query' ].": ".$phonetic;
-		$explains = $result['basic']['explains'][0];
-		$other = $result['web'][0]['key'].": ".$result['web'][0]['value'][0];
+		$explains = $result['basic']['explains'][0]."\n";
+		$other = $result['web'][0]['key'].": ".$result['web'][0]['value'][0]."\n";
 		
 	}else{
 		$trans = "服务出错";
