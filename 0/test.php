@@ -36,6 +36,7 @@ class baidu{
         $text = $text->trans_result;
         echo "----debug---<br>";
         echo $text;
+        echo "----debug---<br>";
         $src = $text[0]->src;
         $dst = $text[0]->dst;
         $outstr = "[".$src."]: ".$dst;
