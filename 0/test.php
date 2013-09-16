@@ -46,7 +46,7 @@ class baidu{
 	if($errorCode == 0){
 
 	}else{
-		trans = "服务出错";
+		$trans = "服务出错";
 	}
     $trans = $result['translation'][0];
        //	$trans = "dddddd";
