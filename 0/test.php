@@ -17,7 +17,7 @@
                   $contentStr = "Welcome to wechat world!";
                   //$contentStr = $keyword;
                   $baiduobj = new baidu();
-                  $contentStr = $baiduobj->baiduTran($keyword);
+                  //$contentStr = $baiduobj->baiduTran($keyword);
 				  $contentStr = $baiduobj->youdaoTran($keyword);
                   //  $contentStr = $this->youdaoTran($keyword);
                 	$resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType,$keyword, $contentStr);
