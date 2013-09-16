@@ -1,5 +1,5 @@
 <?php
-    
+    			echo '<meta charset="utf-8" >';
                 $fromUsername = $_POST[ "FromUserName" ];
                 $toUsername = $_POST[ "ToUserName" ];
                 $keyword = trim($_POST[ "Content" ]);;
