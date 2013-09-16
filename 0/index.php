@@ -22,11 +22,11 @@ class wechatCallbackapiTest{
 			$title = $result[ 'query' ].": ".$phonetic;
 			$explains = $result['basic']['explains'][0]."\n";
 			$devide = "=========\n相关词组：\n";
-			$other = $result['web'][0]['key'].": ".$result['web'][0]['value'][0]."\n";		
+			$other = $result['web'][0]['key'].": ".$result['web'][0]['value'][0]."\n";	
+            $trans = $title.$explains.$devide.$other;
 		}else{
 			$trans = "服务出错";
 		}
-    	$trans = $title.$explains.$devide.$other;
         return $trans;
     }
   
