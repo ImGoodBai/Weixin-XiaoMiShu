@@ -9,7 +9,7 @@
 					FromUserName:%s
 					Time:%s
 					MsgType:%s
-					Result:%s
+					Result:[%s] > %s
 							</pre>";             
 				if(!empty( $keyword ))
                 {
