@@ -40,6 +40,7 @@ class baidu{
 	echo $resultstr;
     $result = json_decode($resultstr);
 	echo $result;
+	echo $result->translation;
 
     //   $errorCode = $result['errorCode'];        
     $trans = $result['translation'];
