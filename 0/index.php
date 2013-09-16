@@ -28,30 +28,6 @@ class wechatCallbackapiTest{
 		}
     	$trans = $title.$explains.$devide.$other;
         return $trans;
-    /*
-        if(isset($errorCode)){
-            switch ($errorCode){
-                case 0:
-                    $trans = $result['translation']['0'];
-                    break;
-                case 20:
-                    $trans = '要翻译的文本过长';
-                    break;
-                case 30:
-                    $trans = '无法进行有效的翻译';
-                    break;
-                case 40:
-                    $trans = '不支持的语言类型';
-                    break;
-                case 50:
-                    $trans = '无效的key';
-                    break;
-                default:
-                    $trans = '出现异常';
-                    break;
-            }
-        }
-*/  
     }
   
  	public function baiduTran($word,$from="auto",$to="auto")
