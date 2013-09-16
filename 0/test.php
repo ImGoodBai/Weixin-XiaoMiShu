@@ -5,14 +5,14 @@
                 $keyword = trim($_POST[ "Content" ]);
                 $msgType = trim($_POST[ "MsgType" ]);
                 $time = time();
-                $textTpl = "<xml>
+                $textTpl = "<pre>
 							<ToUserName><![CDATA[%s]]></ToUserName>
 							<FromUserName><![CDATA[%s]]></FromUserName>
 							<CreateTime>%s</CreateTime>
 							<MsgType><![CDATA[%s]]></MsgType>
 							<Content><![CDATA[%s]]></Content>
 							<FuncFlag>0</FuncFlag>
-							</xml>";             
+							</pre>";             
 				if(!empty( $keyword ))
                 {
               		$msgType = "text";
