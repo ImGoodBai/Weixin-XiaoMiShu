@@ -2,12 +2,12 @@
 
 //define your token
 define("TOKEN", "qwerty2345");
-$wechatObj = new wechatCallbackapiTest();
 //$validOjb = new validURL();
 //$validObj->valid();
+
+$wechatObj = new wechatCallbackapiTest();
 $wechatObj->responseMsg();
 
-//echo $wecharObj->baiduDic("你好");
 class wechatCallbackapiTest{
   
   public function youdaoTran($word){
