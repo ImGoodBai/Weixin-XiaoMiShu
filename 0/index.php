@@ -3,7 +3,8 @@
 //define your token
 define("TOKEN", "qwerty2345");
 $wechatObj = new wechatCallbackapiTest();
-//$wechatObj->valid();
+//$validOjb = new validURL();
+//$validObj->valid();
 $wechatObj->responseMsg();
 
 //echo $wecharObj->baiduDic("你好");
