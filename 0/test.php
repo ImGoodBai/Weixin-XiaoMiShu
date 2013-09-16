@@ -40,7 +40,7 @@ class baidu{
 	$resultstr = $this->getdata4URL($url_youdao);
 	echo $resultstr;
 	echo "-----------------";
-    $result = json_decode($resultstr);
+    $result = json_decode($resultstr,true);
 	echo $result;
 	echo "-----------------";
 	echo $result->translation;
