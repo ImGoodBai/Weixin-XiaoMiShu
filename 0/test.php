@@ -45,9 +45,10 @@ class baidu{
     $errorCode = $result['errorCode']; 
 	if($errorCode == 0){
 
-		$phonetic = $result[ 'basic' ][ 'phonetic' ]."\n";
+		$phonetic = "[".$result[ 'basic' ][ 'phonetic' ]."]\n";
 		$title = $result[ 'query' ].": ".$phonetic;
 		$explains = $result['basic']['explains'][0]."\n";
+		$devide = "=========\n相关词组：\n";
 		$other = $result['web'][0]['key'].": ".$result['web'][0]['value'][0]."\n";
 		
 	}else{
