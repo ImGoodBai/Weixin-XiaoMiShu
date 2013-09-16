@@ -49,7 +49,7 @@ class baidu{
     //   $errorCode = $result['errorCode'];        
     $trans = $result['translation'][0];
        //	$trans = "dddddd";
-        return $trans;  
+        return $resultstr;  
     }
 
  	public function baiduTran($word,$from="auto",$to="auto")
