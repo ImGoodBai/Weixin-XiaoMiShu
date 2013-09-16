@@ -9,7 +9,7 @@ $wechatObj = new wechatCallbackapiTest();
 $wechatObj->responseMsg();
 
 class wechatCallbackapiTest{
-    public function youdaoTran($word){
+    public function youdaoTran1($word){
         $keyfrom = "goodbaiA";    //申请APIKEY时所填表的网站名称的内容
         $apikey = "2122702772";  //从有道申请的APIKEY    
         //有道翻译-json格式
@@ -40,13 +40,14 @@ class wechatCallbackapiTest{
         return $trans;  
     }
   
-  public function youdaoTran2($word){
+  public function youdaoTran($word){
         $keyfrom = "goodbaiA";    //申请APIKEY时所填表的网站名称的内容
         $apikey = "2122702772";  //从有道申请的APIKEY    
         //有道翻译-json格式
         $url_youdao = 'http://fanyi.youdao.com/fanyiapi.do?keyfrom='.$keyfrom.'&key='.$apikey.'&type=data&doctype=json&version=1.1&q='.$word; 
     	//$url_youdao = 'http://fanyi.youdao.com/openapi.do?keyfrom=goodbaiA&key=2122702772&type=data&doctype=json&version=1.1&q=wolf';   
-		$result = json_decode($this->getdata4URL($url_youdao));
+		$resultstr = $this->getdata4URL($url_youdao);
+    $result = json_decode($resultstr,true);
 		$errorCode = $result['errorCode']; 
 		if($errorCode == 0){
 			$phonetic = "[".$result[ 'basic' ][ 'phonetic' ]."]\n";
