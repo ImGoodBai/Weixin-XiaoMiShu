@@ -1,6 +1,5 @@
 <?php
 
-//echo "Welcome to goodbai.duapp";
 //define your token
 define("TOKEN", "qwerty2345");
 $wechatObj = new wechatCallbackapiTest();
@@ -10,16 +9,7 @@ $wechatObj->responseMsg();
 //echo $wecharObj->baiduDic("你好");
 class wechatCallbackapiTest
 {
-	public function valid()
-    {
-        $echoStr = $_GET["echostr"];
-
-        //valid signature , option
-        if($this->checkSignature()){
-        	echo $echoStr;
-        	exit;
-        }
-    }
+	
   
   public function youdaoTran($word){
 
@@ -148,7 +138,18 @@ class wechatCallbackapiTest
         	exit;
         }
     }
-		
+}	
+class validURL{
+  public function valid()
+    {
+        $echoStr = $_GET["echostr"];
+
+        //valid signature , option
+        if($this->checkSignature()){
+        	echo $echoStr;
+        	exit;
+        }
+    }
 	private function checkSignature()
 	{
         $signature = $_GET["signature"];
