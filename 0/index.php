@@ -9,7 +9,6 @@ $wechatObj = new wechatCallbackapiTest();
 $wechatObj->responseMsg();
 
 class wechatCallbackapiTest{
-  
   public function youdaoTran($word){
 
         $keyfrom = "goodbaiA";    //申请APIKEY时所填表的网站名称的内容
