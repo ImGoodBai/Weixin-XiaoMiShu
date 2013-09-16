@@ -7,7 +7,7 @@
                 $textTpl = "<pre>
 					ToUserName:%s
 					FromUserName:%s
-					Time:$s
+					Time:%s
 					MsgType:%s
 					Result:%s
 							</pre>";             
@@ -49,7 +49,7 @@
         }
 
     }
- */
+ */b
                                        /*                                    
     //百度翻译-获取目标URL所打印的内容
     public function getdata4URL($url){
