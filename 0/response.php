@@ -3,7 +3,7 @@
 class response{
 	public function responseMsg(){
 		if($_SERVER['REQUEST_METHOD']=='POST') {
-			$this->responseWX();
+			$postObj = $this->getReqDataWX();
 		}else{  
 			$this->responseWeb();
 		}
@@ -11,7 +11,7 @@ class response{
 	private function responseWeb(){
   
 	}
-	private function responseWX($postObj){
+	private function responseM($postObj){
 				$fromUsername = $postObj->FromUserName;
                 $toUsername = $postObj->ToUserName;
                 $keyword = trim($postObj->Content);
