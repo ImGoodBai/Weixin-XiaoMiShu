@@ -5,17 +5,21 @@ class response{
 		if($_SERVER['REQUEST_METHOD']=='POST') {
           	//echo "postObj3:".$_POST[ 'FromUserName' ];
 			$postObj = $this->getReqDataWX();
+          	$fromUsername = $postObj->FromUserName;
+            $toUsername = $postObj->ToUserName;
+            $keyword = trim($postObj->Content);
 		}else{
           	echo "GET";
-			$postObj[ 'Content' ] = $_GET[ 'Content' ];
+			$postObj = $_GET;
+            $fromUsername = $postObj['FromUserName'];
+            $toUsername = $postObj['ToUserName'];
+            $keyword = trim($postObj['Content']);
 		}
-		$this->responseMsg($postObj);
+		$this->responseMsg($fromUsername,$toUsername,$keyword);
 	} 
 
 	private function responseMsg($postObj){
-				$fromUsername = $postObj->FromUserName;
-                $toUsername = $postObj->ToUserName;
-                $keyword = trim($postObj->Content);
+
                 $time = time();
                 $textTpl = "<xml>
 							<ToUserName><![CDATA[%s]]></ToUserName>
