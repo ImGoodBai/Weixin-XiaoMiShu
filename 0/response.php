@@ -8,7 +8,9 @@ class response{
 			$this->responseWeb();
 		}
 	} 
+  private function responseWeb(){
     
+  }
     private function responseWX()
     {
 		//get post data, May be due to the different environments
@@ -48,7 +50,7 @@ class response{
         	echo "";
         	exit;
         }
-    }
+    }//responseWX END
 }
 
 
