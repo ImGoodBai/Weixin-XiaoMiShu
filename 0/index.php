@@ -36,11 +36,11 @@ class response{
 				if(!empty( $keyword ))
                 {
               		$msgType = "text";
-                  $contentStr = "Welcome to wechat world!";
+                  //$contentStr = "Welcome to wechat world!";
                   //$contentStr = $keyword;
                    // $contentStr = $this->baiduTran($keyword);
-                  //$translateOBJ = new translate();                  
-                  // $contentStr = $translateOBJ->youdaoTran($keyword);
+                  $translateOBJ = new translate();                  
+                  $contentStr = $translateOBJ->youdaoTran($keyword);
                 	$resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $contentStr);
                 	echo $resultStr;
                 }else{
