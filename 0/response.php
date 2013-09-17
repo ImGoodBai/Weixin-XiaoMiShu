@@ -9,7 +9,7 @@ class response{
 		}
 	} 
     
-    public function responseWX()
+    private function responseWX()
     {
 		//get post data, May be due to the different environments
 		$postStr = $GLOBALS["HTTP_RAW_POST_DATA"];
