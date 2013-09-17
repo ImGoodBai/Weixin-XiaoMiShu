@@ -75,6 +75,7 @@ class response{
         	echo "NULL";
         	exit;
         }
+      return $postObj;
     }//function responseWX END
 }// class resopnse END
 
