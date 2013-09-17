@@ -1,5 +1,28 @@
 <?php
-public function youdaoTran($word){
+class translate{
+      //百度翻译-获取目标URL所打印的内容
+    public function getdata4URL($url){
+        if(!function_exists('file_get_contents')){
+            $file_contents = file_get_contents($url);
+        }else{              
+            //初始化一个cURL对象
+            $ch = curl_init();
+            $timeout = 5;
+            //设置需要抓取的URL
+            curl_setopt ($ch, CURLOPT_URL, $url);
+            //设置cURL 参数，要求结果保存到字符串中还是输出到屏幕上
+            curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
+            //在发起连接前等待的时间，如果设置为0，则无限等待
+            curl_setopt ($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
+            //运行cURL，请求网页
+            $file_contents = curl_exec($ch);
+            //关闭URL请求
+            curl_close($ch);
+        }
+        return $file_contents;
+    }
+  
+  public function youdaoTran($word){
         $keyfrom = "goodbaiA";    //申请APIKEY时所填表的网站名称的内容
         $apikey = "2122702772";  //从有道申请的APIKEY    
         //有道翻译-json格式
@@ -21,6 +44,9 @@ public function youdaoTran($word){
         return $trans;
     }
   
+}
+
+class translte_baidu{
  	public function baiduTran($word,$from="auto",$to="auto")
     {
       //echo "My tran function.";
@@ -45,29 +71,7 @@ public function youdaoTran($word){
         	return $trans;
         }
 */
-    }
-        
-    //百度翻译-获取目标URL所打印的内容
-    public function getdata4URL($url){
-        if(!function_exists('file_get_contents')){
-            $file_contents = file_get_contents($url);
-        }else{              
-            //初始化一个cURL对象
-            $ch = curl_init();
-            $timeout = 5;
-            //设置需要抓取的URL
-            curl_setopt ($ch, CURLOPT_URL, $url);
-            //设置cURL 参数，要求结果保存到字符串中还是输出到屏幕上
-            curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
-            //在发起连接前等待的时间，如果设置为0，则无限等待
-            curl_setopt ($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
-            //运行cURL，请求网页
-            $file_contents = curl_exec($ch);
-            //关闭URL请求
-            curl_close($ch);
-        }
-        return $file_contents;
-    }
-
+    }        
+}
 
 ?>
