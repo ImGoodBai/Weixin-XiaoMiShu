@@ -11,8 +11,17 @@ class response{
             $fromUsername = $postObj['FromUserName'];
             $toUsername = $postObj['ToUserName'];
             $keyword = trim($postObj['Content']);
-          	echo "postObj4:".trim($postObj["Content"]);
-		}
+          	//echo "postObj4:".trim($postObj["Content"]);
+			if(!empty( $keyword )){
+              	$msgType = "text";
+                $translateOBJ = new translate();                  
+                $contentStr = $translateOBJ->youdaoTran($keyword);
+                $resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $contentStr);
+                echo $resultStr;
+            else{
+                echo "Must Input something...";
+            }
+		}// responseTo END
 
 	} 
 
