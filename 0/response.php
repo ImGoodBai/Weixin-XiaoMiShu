@@ -1,7 +1,10 @@
 <?php
 
 class response{
-
+  public function responseMsg(){
+    
+  } 
+    
     public function responseMsg()
     {
 		//get post data, May be due to the different environments
