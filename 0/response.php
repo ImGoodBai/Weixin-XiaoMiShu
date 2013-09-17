@@ -1,11 +1,11 @@
 <?php
 
 class response{
-  public function responseMsg(){
+  public function responseMsg2(){
     
   } 
     
-    public function responseMsg2()
+    public function responseMsg()
     {
 		//get post data, May be due to the different environments
 		$postStr = $GLOBALS["HTTP_RAW_POST_DATA"];
