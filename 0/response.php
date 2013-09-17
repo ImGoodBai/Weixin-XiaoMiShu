@@ -1,9 +1,13 @@
 <?php
 
 class response{
-  public function responseMsg2(){
-    
-  } 
+	public function responseMsg2(){
+if($_SERVER['REQUEST_METHOD']=='POST') {
+echo 'POST方式';
+}else{  
+echo 'GET方式';
+}
+	} 
     
     public function responseMsg()
     {
