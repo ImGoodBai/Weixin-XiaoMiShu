@@ -7,7 +7,7 @@ class response{
 		}else{
           	echo "GET";
           echo "postObj";
-			$postObj = $_POST;
+			$postObj = $_GET;
 		}
 		$this->responseM($postObj);
 	} 
