@@ -16,13 +16,13 @@ class response{
               	$msgType = "text";
                 $translateOBJ = new translate();                  
                 $contentStr = $translateOBJ->youdaoTran($keyword);
-             	$textTpl = "<pre>
+             	$textTpl = '<pre>
 					ToUserName:%s
 					FromUserName:%s
 					Time:%s
 					MsgType:%s
 					Result:[%s] > %s
-					</pre>";
+					</pre>';
                 //$resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $keyword, $contentStr);
                 $resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType,$keyword, $contentStr);
                 echo $resultStr;
