@@ -37,7 +37,7 @@ class response{
                 }else{
                 	echo "Input something...";
                 }
-    }// responseMsg
+    }// responseMsg END
   
     private function getReqDataWX()
     {
