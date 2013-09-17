@@ -2,7 +2,7 @@
 
 class response{
 	public function responseTo(){
-		if($_SERVER['REQUEST_METHOD']=='POST') {
+		if($_SERVER['REQUEST_METHOD']=='dPOST') {
 			$postObj = $this->getReqDataWX();
 		}else{
           	echo "GET";
