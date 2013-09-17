@@ -3,7 +3,7 @@
 class response{
 	public function responseTo(){
 		if($_SERVER['REQUEST_METHOD']=='POST') {
-          	echo "postObj3:".$_POST[ 'FromUserName' ];
+          	//echo "postObj3:".$_POST[ 'FromUserName' ];
 			$postObj = $this->getReqDataWX();
 		}else{
           	echo "GET";
