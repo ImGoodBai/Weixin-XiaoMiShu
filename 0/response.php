@@ -19,7 +19,6 @@ class response{
 	} 
 
 	private function responseMsg($fromUsername,$toUsername,$keyword){
-
                 $time = time();
                 $textTpl = "<xml>
 							<ToUserName><![CDATA[%s]]></ToUserName>
