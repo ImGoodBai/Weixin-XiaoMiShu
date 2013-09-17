@@ -10,6 +10,6 @@ define("TOKEN", "qwerty2345");
 //$validObj->valid();
 
 $responseObj = new response();
-$responseObj->responseto();
+$responseObj->responseTo();
 
 ?>
