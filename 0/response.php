@@ -6,13 +6,11 @@ class response{
 			$postObj = $this->getReqDataWX();
 		}else{
           	echo "GET";
-			$this->responseWeb();
+			$postObj = $_POST;
 		}
 		$this->responseM($postObj);
 	} 
-	private function responseWeb(){
-		$postObj = $_POST;
-	}
+
 	private function responseMsg($postObj){
 				$fromUsername = $postObj->FromUserName;
                 $toUsername = $postObj->ToUserName;
@@ -39,7 +37,8 @@ class response{
                 }else{
                 	echo "Input something...";
                 }
-    }// 
+    }// responseMsg
+  
     private function getReqDataWX()
     {
 		//get post data, May be due to the different environments
