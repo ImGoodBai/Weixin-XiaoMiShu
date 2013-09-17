@@ -14,7 +14,6 @@ class response{
 	} 
 
 	private function responseMsg($postObj){
-      			$postObj = $_POST;
 				$fromUsername = $postObj->FromUserName;
                 $toUsername = $postObj->ToUserName;
                 $keyword = trim($postObj->Content);
