@@ -45,7 +45,7 @@ class translate{
         return $trans;
     }
     public function getTran($word){
-      return youdaoTran($word);
+      return this->youdaoTran($word);
 }
 
 class translte_baidu{
