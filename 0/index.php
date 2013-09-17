@@ -1,5 +1,6 @@
 <?php
 
+require( 'translate.php' );
 //define your token
 define("TOKEN", "qwerty2345");
 
