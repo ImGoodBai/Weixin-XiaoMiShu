@@ -4,10 +4,15 @@ class response{
 	public function responseTo(){
 		if($_SERVER['REQUEST_METHOD']=='POST') {     	
 			$postObj = $this->getReqDataWX();
-			$this->responseMsg($postObj);
+			$this->responseMsgWX($postObj);
 		}else{
           	echo "GET";
-			$postObj = $_GET;
+          	$postObj = $_GET;
+         	$this->responseMsgWeb($postObj);
+
+		}
+	} // responseTo END
+	private function responseMsgWeb($postObj){
             $fromUsername = $postObj['FromUserName'];
             $toUsername = $postObj['ToUserName'];
             $keyword = trim($postObj['Content']);
@@ -27,11 +32,9 @@ class response{
                 echo $resultStr;
             }else{
                 echo "Must Input something...";
-            }
-		}
-	} // responseTo END
-
-	private function responseMsg($postObj){
+            }      
+    }
+	private function responseMsgWX($postObj){
     	      	$fromUsername = $postObj->FromUserName;
      	        $toUsername = $postObj->ToUserName;
       	        $keyword = trim($postObj->Content);
