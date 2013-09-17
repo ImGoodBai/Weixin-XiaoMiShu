@@ -18,7 +18,7 @@ class response{
 		$this->responseMsg($fromUsername,$toUsername,$keyword);
 	} 
 
-	private function responseMsg($postObj){
+	private function responseMsg($fromUsername,$toUsername,$keyword){
 
                 $time = time();
                 $textTpl = "<xml>
