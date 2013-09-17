@@ -5,7 +5,7 @@ class response{
 		if($_SERVER['REQUEST_METHOD']=='POST') {
 			responseWX();
 		}else{  
-			responseWeb();
+			responseWX();
 		}
 	} 
     
