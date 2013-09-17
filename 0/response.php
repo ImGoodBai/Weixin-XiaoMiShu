@@ -13,7 +13,8 @@ class response{
 	} 
 
 	private function responseMsg($postObj){
-         	   echo "postObj2:".$postObj;
+      			$postObj = $_GET;
+         	    echo "postObj2:".$postObj;
 				$fromUsername = $postObj->FromUserName;
                 $toUsername = $postObj->ToUserName;
                 $keyword = trim($postObj->Content);
