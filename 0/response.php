@@ -48,12 +48,12 @@ class response{
 		$postStr = $GLOBALS["HTTP_RAW_POST_DATA"];
       	//extract post data
 		if (!empty($postStr)){               
-              	$postObj = simplexml_load_string($postStr, 'SimpleXMLElement', LIBXML_NOCDATA);               
+              	$postObj = simplexml_load_string($postStr, 'SimpleXMLElement', LIBXML_NOCDATA); 
+          		echo "postObj3:".$postObj->FromUserName;
         }else {
         	echo "NULL";
         	exit;
         }
-      echo "postObj3:".$postObj->FromUserName;
       return $postObj;
     }//function responseWX END
 }// class resopnse END
