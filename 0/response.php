@@ -5,7 +5,7 @@ class response{
     
   } 
     
-    public function responseMsg()
+    public function responseMsg2()
     {
 		//get post data, May be due to the different environments
 		$postStr = $GLOBALS["HTTP_RAW_POST_DATA"];
