@@ -4,7 +4,8 @@ class response{
 	public function responseTo(){
 		if($_SERVER['REQUEST_METHOD']=='POST') {
 			$postObj = $this->getReqDataWX();
-		}else{  
+		}else{
+          	echo "GET";
 			$this->responseWeb();
 		}
 		$this->responseM($postObj);
