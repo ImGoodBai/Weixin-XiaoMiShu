@@ -37,7 +37,7 @@ class response{
 		$trans = $title.$explains.$devide.$other;
         return $trans;   
 	}
-	private function responseWX(){
+	private function responseWX($postObj){
 			$fromUsername = $postObj->FromUserName;
                 $toUsername = $postObj->ToUserName;
                 $keyword = trim($postObj->Content);
@@ -75,7 +75,7 @@ class response{
         	echo "NULL";
         	exit;
         }
-      return $reqObj;
+      return $postObj;
     }//function responseWX END
 }// class resopnse END
 
