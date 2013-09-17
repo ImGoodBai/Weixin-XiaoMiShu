@@ -5,7 +5,7 @@ class response{
 		if($_SERVER['REQUEST_METHOD']=='POST') {
           	
 			$postObj = $this->getReqDataWX();
-
+			$this->responseMsg($postObj);
 		}else{
           	echo "GET";
 			$postObj = $_GET;
@@ -14,7 +14,7 @@ class response{
             $keyword = trim($postObj['Content']);
           	echo "postObj4:".trim($postObj["Content"]);
 		}
-		$this->responseMsg($fromUsername,$toUsername,$keyword);
+
 	} 
 
 	private function responseMsg($fromUsername,$toUsername,$keyword){
