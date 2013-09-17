@@ -7,6 +7,7 @@ class response{
 		}else{  
 			$this->responseWeb();
 		}
+		$this->responseM($postObj);
 	} 
 	private function responseWeb(){
   
