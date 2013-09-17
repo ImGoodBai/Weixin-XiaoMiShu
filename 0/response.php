@@ -3,9 +3,9 @@
 class response{
 	public function responseMsg(){
 		if($_SERVER['REQUEST_METHOD']=='POST') {
-			responseWX();
+			$this->responseWX();
 		}else{  
-			responseWX();
+			$this->responseWeb();
 		}
 	} 
     
