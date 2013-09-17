@@ -2,8 +2,7 @@
 
 class response{
 	public function responseTo(){
-		if($_SERVER['REQUEST_METHOD']=='POST') {
-          	
+		if($_SERVER['REQUEST_METHOD']=='POST') {     	
 			$postObj = $this->getReqDataWX();
 			$this->responseMsg($postObj);
 		}else{
@@ -17,7 +16,7 @@ class response{
 
 	} 
 
-	private function responseMsg($fromUsername,$toUsername,$keyword){
+	private function responseMsg($postObj){
     	      	$fromUsername = $postObj->FromUserName;
      	        $toUsername = $postObj->ToUserName;
       	        $keyword = trim($postObj->Content);
