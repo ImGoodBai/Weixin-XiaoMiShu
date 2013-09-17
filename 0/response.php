@@ -8,7 +8,7 @@ class response{
           	echo "GET";
             
 			$postObj = $_GET;
-            echo "postObj".$postObj;
+            echo "postObj:".$postObj;
 		}
 		$this->responseMsg($postObj);
 	} 
