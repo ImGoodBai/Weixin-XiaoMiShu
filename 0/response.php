@@ -18,10 +18,10 @@ class response{
                 $contentStr = $translateOBJ->youdaoTran($keyword);
              	$textTpl = '<div align="center">
 					ToUserName:%s
-					FromUserName:%s
-					Time:%s
-					MsgType:%s
-					Result:[%s] > %s
+					<br>FromUserName:%s
+					<br>Time:%s
+					<br>MsgType:%s
+					<br>Result:[%s] > %s
 					</div>';
                 $resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType,$keyword, $contentStr);
                 echo $resultStr;
