@@ -46,7 +46,7 @@ class translate{
     }
   
     public function getTran($word){
-
+      return this->youdaoTran($word);
     }
 }
 
