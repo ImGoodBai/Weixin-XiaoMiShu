@@ -3,6 +3,7 @@
 class response{
 	public function responseTo(){
 		if($_SERVER['REQUEST_METHOD']=='POST') {
+          	echo "postObj3:".$postObj->FromUserName;
 			$postObj = $this->getReqDataWX();
 		}else{
           	echo "GET";
@@ -49,7 +50,6 @@ class response{
       	//extract post data
 		if (!empty($postStr)){               
               	$postObj = simplexml_load_string($postStr, 'SimpleXMLElement', LIBXML_NOCDATA); 
-          		echo "postObj3:".$postObj->FromUserName;
         }else {
         	echo "NULL";
         	exit;
