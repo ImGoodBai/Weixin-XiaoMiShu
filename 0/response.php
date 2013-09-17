@@ -50,8 +50,8 @@ class response{
         	echo "";
         	exit;
         }
-    }//responseWX END
-}
+    }//function responseWX END
+}// class resopnse END
 
 
 ?>
