@@ -23,7 +23,7 @@ class response{
 					MsgType:%s
 					Result:[%s] > %s
 					</pre>";
-                $resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $contentStr);
+                $resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType,$keyword, $contentStr);
                 echo $resultStr;
             else{
                 echo "Must Input something...";
