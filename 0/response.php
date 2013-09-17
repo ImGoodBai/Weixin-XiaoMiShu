@@ -8,7 +8,6 @@ class response{
 		}else{
           	echo "GET";
 			$postObj = $_GET;
-            echo "postObj:".$postObj->FromUserName;
 		}
 		$this->responseMsg($postObj);
 	} 
