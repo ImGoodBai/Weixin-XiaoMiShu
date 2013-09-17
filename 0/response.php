@@ -3,13 +3,13 @@
 class response{
 	public function responseMsg2(){
 if($_SERVER['REQUEST_METHOD']=='POST') {
-echo 'POST方式';
+responseWX();
 }else{  
-echo 'GET方式';
+responseWeb();
 }
 	} 
     
-    public function responseMsg()
+    public function responseWX()
     {
 		//get post data, May be due to the different environments
 		$postStr = $GLOBALS["HTTP_RAW_POST_DATA"];
