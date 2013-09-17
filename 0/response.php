@@ -23,6 +23,7 @@ class response{
 					MsgType:%s
 					Result:[%s] > %s
 					</pre>";
+                //$resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $keyword, $contentStr);
                 $resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType,$keyword, $contentStr);
                 echo $resultStr;
             else{
