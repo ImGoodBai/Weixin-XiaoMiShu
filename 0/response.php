@@ -14,7 +14,7 @@ class response{
             $fromUsername = $postObj['FromUserName'];
             $toUsername = $postObj['ToUserName'];
             $keyword = trim($postObj['Content']);
-          	echo "postObj4:".$postObj[ 'trim($postObj["Content"])' ];
+          	echo "postObj4:".trim($postObj["Content"]);
 		}
 		$this->responseMsg($fromUsername,$toUsername,$keyword);
 	} 
