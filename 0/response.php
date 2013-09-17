@@ -10,7 +10,7 @@ class response{
 		$this->responseM($postObj);
 	} 
 	private function responseWeb(){
-  
+		$postObj = $_POST;
 	}
 	private function responseMsg($postObj){
 				$fromUsername = $postObj->FromUserName;
