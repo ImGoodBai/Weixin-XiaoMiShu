@@ -39,7 +39,7 @@ class response{
                   $translateOBJ = new translate();                  
                   $contentStr = $translateOBJ->youdaoTran($keyword);
                 	$resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $contentStr);
-                	//echo $resultStr;
+                	echo $resultStr;
                 }else{
                 	echo "Must Input something...";
                 }
