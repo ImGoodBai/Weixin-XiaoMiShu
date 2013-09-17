@@ -71,10 +71,8 @@ class response{
       	//extract post data
 		if (!empty($postStr)){               
               	$postObj = simplexml_load_string($postStr, 'SimpleXMLElement', LIBXML_NOCDATA);               
-
-
         }else {
-        	echo "";
+        	echo "NULL";
         	exit;
         }
     }//function responseWX END
