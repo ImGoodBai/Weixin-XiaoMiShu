@@ -22,12 +22,7 @@ class translate{
         }
         return $file_contents;
     }
-  
 
-  
-    public function getTran($word){
-      return this->youdaoTran($word);
-    }
 }
 
 class translte_baidu{
