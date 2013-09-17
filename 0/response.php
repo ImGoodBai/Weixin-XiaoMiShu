@@ -1,12 +1,12 @@
 <?php
 
 class response{
-	public function responseMsg2(){
-if($_SERVER['REQUEST_METHOD']=='POST') {
-responseWX();
-}else{  
-responseWeb();
-}
+	public function responseMsg(){
+		if($_SERVER['REQUEST_METHOD']=='POST') {
+			responseWX();
+		}else{  
+			responseWeb();
+		}
 	} 
     
     public function responseWX()
