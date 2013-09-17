@@ -6,7 +6,7 @@ class response{
 			$postObj = $this->getReqDataWX();
 		}else{
           	echo "GET";
-          echo "postObj";
+            echo "postObj";
 			$postObj = $_GET;
 		}
 		$this->responseM($postObj);
