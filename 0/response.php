@@ -18,7 +18,7 @@ class response{
 		$this->responseMsg($fromUsername,$toUsername,$keyword);
 	} 
 
-	private function responseMsg($fromUsername,$toUsername,$keyword){
+	private function responseMsg($FromUsername,$FoUsername,$Keyword){
                 $time = time();
                 $textTpl = "<xml>
 							<ToUserName><![CDATA[%s]]></ToUserName>
