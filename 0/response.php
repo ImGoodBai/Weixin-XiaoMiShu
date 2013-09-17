@@ -20,6 +20,7 @@ class response{
 	} 
 
 	private function responseMsg($fromUsername,$toUsername,$keyword){
+      			echo "postObj4:".$keyword;
                 $time = time();
                 $textTpl = "<xml>
 							<ToUserName><![CDATA[%s]]></ToUserName>
