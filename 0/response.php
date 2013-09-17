@@ -9,7 +9,7 @@ class response{
             echo "postObj";
 			$postObj = $_GET;
 		}
-		$this->responseM($postObj);
+		$this->responseMsg($postObj);
 	} 
 
 	private function responseMsg($postObj){
