@@ -36,7 +36,7 @@ class response{
                 	$resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $contentStr);
                 	//echo $resultStr;
                 }else{
-                	echo "Input something...";
+                	echo "Must Input something...";
                 }
     }// responseMsg END
   
