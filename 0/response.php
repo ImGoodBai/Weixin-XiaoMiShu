@@ -16,14 +16,20 @@ class response{
               	$msgType = "text";
                 $translateOBJ = new translate();                  
                 $contentStr = $translateOBJ->youdaoTran($keyword);
+             	$textTpl = "<pre>
+					ToUserName:%s
+					FromUserName:%s
+					Time:%s
+					MsgType:%s
+					Result:[%s] > %s
+					</pre>";
                 $resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $contentStr);
                 echo $resultStr;
             else{
                 echo "Must Input something...";
             }
-		}// responseTo END
-
-	} 
+		}
+	} // responseTo END
 
 	private function responseMsg($postObj){
     	      	$fromUsername = $postObj->FromUserName;
