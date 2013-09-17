@@ -6,12 +6,14 @@ class response{
 			$postObj = $this->getReqDataWX();
 		}else{
           	echo "GET";
+          echo "postObj";
 			$postObj = $_POST;
 		}
 		$this->responseM($postObj);
 	} 
 
 	private function responseMsg($postObj){
+      			echo "postObj";
 				$fromUsername = $postObj->FromUserName;
                 $toUsername = $postObj->ToUserName;
                 $keyword = trim($postObj->Content);
